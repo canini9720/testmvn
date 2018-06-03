@@ -1,4 +1,4 @@
-package org.testservice.common;
+package com.testservice.common;
 
 import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
@@ -31,8 +31,11 @@ public class DateUtil {
        return system_date = formatter.format(sys_date);	
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
+		String date="25/02/1984 12:42:12";
 		
+		Date d=DateUtil.getDate(date, FORMAT_DDMMYYYY_HHMMSS);
+		System.out.println(d);
 	}
 	
 }

@@ -1,4 +1,4 @@
-package org.testservice.common;
+package com.testservice.common;
 
 /**
  * Hello world!
