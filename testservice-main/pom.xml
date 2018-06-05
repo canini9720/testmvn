@@ -64,5 +64,6 @@
   <modules>
     <module>testservice-web</module>
     <module>testservice-common</module>
+    <module>testservice-elephant</module>
   </modules>
 </project>

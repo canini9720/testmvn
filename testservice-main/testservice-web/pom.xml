@@ -17,6 +17,11 @@
 			<artifactId>testservice-common</artifactId>
 			<version>${testservice.common.version}</version>
 		</dependency>
+			<dependency>
+			<groupId>com.test</groupId>
+			<artifactId>testservice-elephant</artifactId>
+			<version>${testservice.version}</version> 
+		</dependency> 
 	</dependencies>
 	<build>
 		<finalName>testservice-web</finalName>
