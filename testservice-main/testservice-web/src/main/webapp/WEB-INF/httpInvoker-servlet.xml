@@ -11,13 +11,12 @@
 		http://jax-ws.dev.java.net/spring/servlet http://jax-ws.java.net/spring/servlet.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd" >
 		
-		<import resource="spring-servlet.xml"/>
-		<import resource="soapContext.xml"/>
-		<import resource="httpInvoker-servlet.xml"/>
-		
-		
-		
-	
-	
-		
-	</beans>
+
+    
+	<bean id="testService" class="com.testservice.implementation.TestServiceImpl" />
+   <bean name="/testServiceHost"  class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+        <property name="service" ref="testService" />  
+            <property name="serviceInterface" value="com.testservice.service.TestService">
+        </property>
+    </bean> 
+ </beans>

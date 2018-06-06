@@ -24,4 +24,14 @@
 		</wss:service>
 	</wss:binding>	
 	
+	<wss:binding url="/testRequest">
+		<wss:service>
+			<ws:service bean="#testEndpoint">
+				<ws:handlers>
+					<ref bean="soapHandler"/>
+				</ws:handlers>
+			</ws:service>
+		</wss:service>
+	</wss:binding>	
+	
 </beans>
