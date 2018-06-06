@@ -14,7 +14,7 @@ import com.testservice.dto.ElephantRidingDTO;
 @Component
 public class ElephantWSClient extends WSClientUtil {
 	
-	static final Logger logger = Logger.getLogger(CommonConstants.LOGGER_TRAFFIC_SERVICES_INFO);
+
 	
 
 	private String endPoint;

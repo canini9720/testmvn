@@ -31,8 +31,8 @@ public class TestServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String date="25/02/1984 12:42:12";
 		try {
-			response.getWriter().append("Served at: ").append(request.getContextPath()+" Date--> "+DateUtil.getDate(date, "dd/MM/yyyy HH:mm:ss"));
-		} catch (ParseException e) {
+			response.getWriter().append("Served at: ").append(request.getContextPath()+" Date--> "+new Date() );
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

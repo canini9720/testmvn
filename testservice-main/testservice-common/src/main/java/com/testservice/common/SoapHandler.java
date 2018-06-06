@@ -24,8 +24,6 @@ import com.ctc.wstx.util.ExceptionUtil;
 @WebFault
 public class SoapHandler implements SOAPHandler<SOAPMessageContext> {
 	
-	//private static final Logger logger = Logger.getLogger(CommonConstants.LOGGER_DPSERVICES_ERROR);
-	//private static final Logger loggerInfo = Logger.getLogger(CommonConstants.LOGGER_DPSERVICES_INFO);
 	
     public Set<QName> getHeaders() {
         return Collections.emptySet();
@@ -34,20 +32,6 @@ public class SoapHandler implements SOAPHandler<SOAPMessageContext> {
     public boolean handleMessage(SOAPMessageContext context) {
         
         
-        /*SOAPMessage soapMessage =  context.getMessage();
-    	SOAPPart soapPart = soapMessage.getSOAPPart();
-    	SOAPEnvelope soapEnvelope;
-    	
-    	try {
-    		
-			soapEnvelope = soapPart.getEnvelope();
-			SOAPBody soapBody = soapEnvelope.getBody();
-			
-			soapBody.getTextContent());
-			
-		} catch (SOAPException e) {
-			
-		}*/
         
         return true;
     }
@@ -65,8 +49,8 @@ public class SoapHandler implements SOAPHandler<SOAPMessageContext> {
 			SOAPBody soapBody = soapEnvelope.getBody();
 	    	SOAPFault soapFault = soapBody.getFault();
 	    	
-	    	String faultCode = CommonConstants.STR_ZERO;
-	    	String faultMessage = CommonConstants.EXC_SERVER_ERROR;
+	    	String faultCode = "0";
+	    	String faultMessage = "Server Error";
 	    	
 	    	if(soapFault != null){
 		    	
@@ -75,30 +59,9 @@ public class SoapHandler implements SOAPHandler<SOAPMessageContext> {
 		    	if(faultMsg != null && !faultMsg.isEmpty()){
 		    		
 		    		String faultMsgs[] = faultMsg.split("-");
-		    		
-		    		/*if(faultMsgs.length > 1 && ExceptionUtil.DPSERVICES_EXCEPTION.equals(faultMsgs[2].trim())){
-		    			
-		    			faultCode = faultMsgs[0];
-		    			faultMessage = faultMsgs[1];
-		    			
-		    			loggerInfo.info("SOAP FAULT : "+soapFault.getFaultString());
-		    			
-		    		}else if(faultMsg.contains(CommonConstants.DB_EXC_ORA_NO_DATA_FOUND)
-		    				|| faultMsg.contains(CommonConstants.EXC_NO_DATA_FOUND_JPA_STR)){
-		    			
-		    			logger.error("SOAP FAULT : "+soapFault.getFaultString());
-		    			
-		    			faultCode = ExceptionBusinessConstants.NO_DATA_FOUND;
-		    			faultMessage = ExceptionUtil.getErrorMessageFromProps(ExceptionBusinessConstants.NO_DATA_FOUND, ExceptionUtil.EXCEPTION_BUSINESS);
-		    			
-		    		}else{*/
-		    			
-		    			System.out.println("SOAP FAULT : "+soapFault.getFaultString());
-		    			
-		    			
-		    			faultCode = CommonConstants.STR_ZERO;
-		    			faultMessage = CommonConstants.EXC_SERVER_ERROR;
-		    		//}
+	    			System.out.println("SOAP FAULT : "+soapFault.getFaultString());
+	    			faultCode = "0";
+	    			faultMessage = "Server Error";
 		    	}
 	    	}
 	    	

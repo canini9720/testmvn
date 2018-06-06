@@ -41,7 +41,7 @@ public class ElephantRidingEndpoint {
 		BeanUtils.copyProperties(elephantRidingSoapDTO, horseRidingDTO);
 	
 		try{
-			Thread.sleep(20000l);
+			Thread.sleep(1000l);
 			
 			refNoHolder.value = 6548971l;
 			

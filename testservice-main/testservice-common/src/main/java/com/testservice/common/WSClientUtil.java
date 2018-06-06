@@ -33,7 +33,7 @@ import org.xml.sax.InputSource;
 
 public class WSClientUtil {
 	
-	public SOAPEnvelope includeDatNamespace(SOAPEnvelope envelope) throws SOAPException{
+	/*public SOAPEnvelope includeDatNamespace(SOAPEnvelope envelope) throws SOAPException{
 		
 		envelope.addNamespaceDeclaration("dat","http://ws.wso2.org/dataservice");
 		
@@ -192,7 +192,7 @@ public class WSClientUtil {
     		
     		return null;
     	}
-    }
+    }*/
 	
 	public String callServiceByAxis(SOAPEnvelope request, String endpoint, String soapAction, String timeout) throws Exception{
 		
@@ -210,7 +210,7 @@ public class WSClientUtil {
 	}
 	
 	
-	public SOAPEnvelope includeSoapNamespace(SOAPEnvelope envelope) throws SOAPException{
+/*	public SOAPEnvelope includeSoapNamespace(SOAPEnvelope envelope) throws SOAPException{
 		
 		envelope.addNamespaceDeclaration("soap","http://soap.ae.dubaipolice.com/");
 		
@@ -236,5 +236,5 @@ public SOAPEnvelope includeSoapNamespaceAccidentReport(SOAPEnvelope envelope) th
 		envelope.addNamespaceDeclaration("soap","http://soap.dubaipolice.ae/");
 		
 		return envelope;
-	}
+	}*/
 }
