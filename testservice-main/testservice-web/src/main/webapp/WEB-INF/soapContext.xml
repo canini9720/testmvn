@@ -14,15 +14,7 @@
 	<!-- to make annotations work -->
 	
     
- 	<wss:binding url="/elephantRiding">
-		<wss:service>
-			<ws:service bean="#elephantRidingEndpoint">
-				<ws:handlers>
-					<ref bean="soapHandler"/>
-				</ws:handlers>
-			</ws:service>
-		</wss:service>
-	</wss:binding>	
+ 	
 	
 	<wss:binding url="/testRequest">
 		<wss:service>

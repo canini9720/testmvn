@@ -29,6 +29,17 @@
 	</listener>
 	
 	
+	 <servlet>
+	        <servlet-name>httpInvoker</servlet-name>
+	        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	        <load-on-startup>2</load-on-startup>
+	    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>httpInvoker</servlet-name>
+        <url-pattern>/invoker/*</url-pattern>
+    </servlet-mapping> 
+	
 	<servlet>
 		<servlet-name>jaxws-servlet</servlet-name>
 		<servlet-class>
@@ -51,5 +62,8 @@
 		<res-type>javax.sql.Datasource</res-type>
 		<res-auth>Container</res-auth>
 	</resource-ref>
+	
+	
+	
   
 </web-app>

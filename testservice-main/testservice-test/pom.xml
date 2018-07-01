@@ -5,7 +5,7 @@
     <artifactId>testservice-main</artifactId>
     <version>${testservice.version}</version>
   </parent>
-  <artifactId>testservice-elephant</artifactId>
+  <artifactId>testservice-test</artifactId>
   <dependencies>
   	<dependency>
 		<groupId>com.test</groupId>

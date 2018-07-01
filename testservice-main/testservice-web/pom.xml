@@ -19,7 +19,7 @@
 		</dependency>
 			<dependency>
 			<groupId>com.test</groupId>
-			<artifactId>testservice-elephant</artifactId>
+			<artifactId>testservice-test</artifactId>
 			<version>${testservice.version}</version> 
 		</dependency> 
 	</dependencies>

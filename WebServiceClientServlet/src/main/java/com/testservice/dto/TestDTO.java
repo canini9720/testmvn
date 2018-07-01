@@ -1,6 +1,8 @@
 package com.testservice.dto;
 
-public class TestDTO {
+import java.io.Serializable;
+
+public class TestDTO implements Serializable{
 
 	private Long emiratesID;
 	private Long referenceNo;

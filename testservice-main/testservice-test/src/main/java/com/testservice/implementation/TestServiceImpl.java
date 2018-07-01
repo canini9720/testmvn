@@ -18,9 +18,13 @@ public class TestServiceImpl implements TestService {
 	
 	@Override
 	public Long saveTest(TestDTO dto) throws Exception {
+		/*Random r = new Random();
+		int Low = 10;
+		int High = 100;
+		int Result = r.nextInt(High-Low) + Low;*/
 		TestEntity testEntity=new TestEntity();
-		testEntity.setId(1l);
-		testEntity.setName("Tester");
+		//testEntity.setId(1l);
+		testEntity.setName("Tester7");
 		testDAO.saveTest(testEntity);
 		System.out.println("cussesfuly inserted");
 		return testEntity.getId();
